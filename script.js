@@ -23,7 +23,6 @@ function Add(){
 }
 
 function Delete(button){
-    //console.log("Delete clicked for element:", button);
     const taskItem = button.parentNode.parentNode;
     taskItem.parentNode.removeChild(taskItem);
 
@@ -35,7 +34,6 @@ function Delete(button){
 function clearAll(){
     const myList = document.getElementById('ToDo');
 
-  // Remove all li items using removeChild
     while (myList.firstChild) {
         myList.removeChild(myList.firstChild);
     }
