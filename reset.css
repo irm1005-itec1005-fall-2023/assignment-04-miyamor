@@ -1,73 +1,109 @@
-/* CSS Reset
-   https://www.joshwcomeau.com/css/custom-css-reset/
-*/
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("/images/background.png");
+    font-family: Comic Sans MS, Comic Sans, cursive;
+    /* padding-bottom: 5%; */
+  }
 
-/*
-1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+main{
+    /* display: flex; */
+    justify-content: center;
+    text-align: center;
+    padding: 1% 1%  2%  2%;
+    width: 400px;
+    min-height: 200px;
+    border: 3px solid none; 
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust the background color and transparency */
+    border-radius: 10px;
+    /* filter: blur(10px); */
+
 }
-/*
-2. Remove default margin
-*/
-* {
-  margin: 0;
-}
-/*
-3. Allow percentage-based heights in the application
-*/
-html,
-body {
-  height: 100%;
-}
-/*
-Typographic tweaks!
-4. Add accessible line-height
-5. Improve text rendering
-*/
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-/*
-6. Improve media defaults
-*/
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-/*
-7. Remove built-in form typography styles
-*/
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-/*
-8. Avoid text overflows
-*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-/*
-9. Create a root stacking context
-*/
-#root,
-#__next {
-  isolation: isolate;
-}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+  }
+
+  input[type="checkbox"] {
+    margin-left: 9%;
+    margin-right: 13px;
+    transform: scale(1.5);
+  }
+
+  .Delete{
+    margin-left: 7%;
+    padding: 2% 1% 2% 1%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(141, 251, 104, 0.616);
+    transition: background-color 0.3s ease;
+  }
+  
+  .Delete:hover{
+    background-color: rgb(240, 93, 93);
+  }
+
+  .wrapper {
+    width: 200px; /* Set a width for the container */
+    border: 1px solid #ccc; /* Add a border for clarity */
+    white-space: pre-line; /* Enable word wrap */
+    padding: 1%;
+  }
+
+  #taskInput{
+    width: 200px;
+    padding: 2%;
+    overflow-wrap: break-word; /* Fallback for browsers that don't support word-break */
+    word-break: break-all;
+  }
+
+  #AddTask{
+    padding: 2% 3% 2% 3%;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    background-color: rgba(141, 251, 104, 0.616);
+    transition: background-color 0.3s ease;
+
+
+  }
+  #AddTask:hover, #clearAll:hover{
+    color:rgba(141, 251, 104, 0.616);
+    background-color: white;
+  }
+
+  #clearAll{
+    padding: 2% 9% 2% 9%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(141, 251, 104, 0.616);
+  }
+
+  @media only screen and (max-width: 500px) {
+    main {
+      width: 80%; /* Adjust width for smaller screens */
+      padding: 5% 3%;
+      margin-left: 2%;
+    }
+
+    #AddTask{
+      margin-top: 2vh;
+    }
+
+    .wrapper {
+      width: 15vw; /* Adjust width for smaller screens */
+      
+    }
+  }
